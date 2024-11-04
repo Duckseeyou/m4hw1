@@ -11,17 +11,10 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <argument
-            android:defaultValue=""
-            app:argType="string"
-            android:name="name" />
-        <argument
-            android:defaultValue=""
-            app:argType="string"
-            android:name="email" />
-        <argument
-            android:defaultValue=""
-            app:argType="string"
-            android:name="password" />
+            android:defaultValue="@null"
+            app:argType="com.m3.m4hw1.User"
+            app:nullable="true"
+            android:name="user" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -29,7 +22,7 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_homeFragment2"
+            android:id="@+id/action_loginFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment

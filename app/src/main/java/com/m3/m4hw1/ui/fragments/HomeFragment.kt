@@ -25,11 +25,18 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply {
+            val user = args.user
 
-            tvName.text = args.name
-            tvEmail.text = args.email
-            tvPassword.text = args.password
+            if (user != null) {
+                tvName.text = user.name
+                tvEmail.text = user.email
+                if (user.password != 0 && user.password.toString().length >= 6){
+                    tvPassword.text = user.password.toString()
+                } else {
+                    tvPassword.text = "Invalid password"
+                }
 
+            }
 
         }
     }
